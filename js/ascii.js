@@ -5,8 +5,9 @@ let asciiDiv;
 
 function setup() {
   noCanvas();
-  video = createVideo("../assets/1.mp4");
+  video = createVideo("assets/1.mp4");
   video.size(90, 80);
+  video.muted = true;
   video.play();
   video.loop();
   asciiDiv = createDiv();
@@ -33,4 +34,5 @@ function draw() {
   }
   asciiDiv.html(asciiImage);
   asciiDiv.parent("ascii");
+
 }
